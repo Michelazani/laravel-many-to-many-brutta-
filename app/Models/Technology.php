@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Technology extends Model
 {
     use HasFactory;
+    public function types(){
+        return $this->belongsToMany(Type::class);
+    }
 }

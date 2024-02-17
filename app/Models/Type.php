@@ -13,4 +13,8 @@ class Type extends Model
         // ha molti post di tipo model-portfolio-class
         return $this-> hasMany(Portfolio::class);
     }
+
+    public function technologies(){
+        return $this->belongsToMany(Technology::class);
+    }
 }
